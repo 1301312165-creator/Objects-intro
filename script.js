@@ -30,7 +30,7 @@ function processForm(event) {
         birthdate: document.getElementById("birthdate").value,
         favoriteColor: document.getElementById("favcolor").value
     }
-    addUser(newUser);
+    console.log(newUser);
 }
 
 function addUser(user) {
