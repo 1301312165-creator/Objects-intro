@@ -1,16 +1,36 @@
 console.log("Script started")
 
 // TODO: Test working with objects here
+let person = {
+    name: "Joel", 
+    age: 15, 
+    favoriteColor: "orange",
+    eyeColor: "hazel"
+};
+console.log(person.name);
+person.name = "Dave";
+
+console.log(person.name);
+person.birthdate = "Sep 19"
+console.log(person);
 
 
 
-function processForm() {
+
+function processForm(event) {
     console.log("click");
-    // TODO: prevent this function from reloading the page when the form is submitted
-
+    //  prevent this function from reloading the page when the form is submitted
+    event.preventDefault();
     // TODO: Create a newUser object that has all the user's info from the form
 
     // TODO: Call the addUser function and pass the newUser object as a parameter
+    let newUser = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        birthdate: document.getElementById("birthdate").value,
+        favoriteColor: document.getElementById("favcolor").value
+    }
+    addUser(newUser);
 }
 
 function addUser(user) {
